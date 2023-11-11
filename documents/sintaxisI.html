@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../scripts/base.js" defer></script>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <title>Sintaxis</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sintaxis básica</h1>
+    </header>
+    <main>
+      <section>
+        <button type="button" class="collapsible">
+          <h2>Estructuras básicas</h2>
+        </button>
+        <article class="content">
+          <h3>Sentencias</h3>
+          <p>Es una unidad de código que realiza una acción.</p>
+          <p>
+            Las sentencias son instrucciones que le indican al programa qué
+            hacer. Cada sentencia en JavaScript termina con un punto y coma (;).
+          </p>
+          <pre><code>alert("Hola mundo");</code></pre>
+          <h4>Funciones predefinidas</h4>
+          <p>
+            Son funciones que vienen con el lenguaje. Son como una especie de
+            biblioteca donde aparecen unas cuentas funciones para que las
+            utilices en los programas siempre que las necesites.
+          </p>
+          <pre><code>isNaN();</code></pre>
+          <h4>Tipos de datos</h4>
+          <ul>
+            <li>Tres tipos básicos:</li>
+            <ul>
+              <li>Números</li>
+              <li>Strings</li>
+              <ul>
+                <li>Deben ir entrecomillados: &apos;, &quot;, `</li>
+              </ul>
+              <li>Booleans: true, false</li>
+            </ul>
+          </ul>
+          <h3>Variables</h3>
+          <p>Se utilizan en todos los lenguajes de programación.</p>
+          <p>
+            Son un espacio en la memoria del ordenador RAM donde se almacenará
+            un valor que podrá cambiar durante la ejecución del programa.
+          </p>
+          <p>Sintaxis (declaración):</p>
+          <pre><code>let puntuacion;</code></pre>
+          <h4>Reglas importantes de dar nombre a una variable:</h4>
+          <ul>
+            <li>Han de comenzar por letra, símbolo $ o _</li>
+            <li>Han de contener solo letras, números, $ y _</li>
+            <li>Son case sensitive (sensible a mayúsculas y minúsculas)</li>
+            <li>No deben ser palabras reservadas</li>
+            <li>Se recomienda que sean descriptivos</li>
+          </ul>
+          <h3>Iniciar la variable</h3>
+          <ul>
+            <li>Es almacenar dentro de ella un valor.</li>
+            <li>
+              <pre><code>let puntuacion; | let num = 0;</code></pre>
+            </li>
+            <li>
+              Se pueden declarar variables en la misma línea.
+              <pre><code>let num, puntuacion, jugador;</code></pre>
+            </li>
+          </ul>
+        </article>
+        <button type="button" class="collapsible">
+          <h2>Operadores básicos</h2>
+        </button>
+        <article class="content">
+          <table>
+            <thead>
+              <tr>
+                <th>Operador</th>
+                <th>Operación</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>+</td>
+                <td>Suma</td>
+                <td>7 + 12</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>Resta</td>
+                <td>9 - 6</td>
+              </tr>
+              <tr>
+                <td>*</td>
+                <td>Multiplicación</td>
+                <td>8 * 7</td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td>División</td>
+                <td>25 / 6</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <button type="button" class="collapsible">
+          <h2>Operadores y prompt</h2>
+        </button>
+        <article class="content">
+          <h3>prompt y alert</h3>
+          <ul>
+            <li>
+              <strong>alert</strong>: muestra un cuadro de diálogo con un
+              mensaje y un botón "Aceptar". Se utiliza para mostrar información
+              al usuario.
+              <pre><code>alert("Hola, esto es un mensaje de alerta");</code></pre>
+            </li>
+            <li>
+              <strong>prompt</strong>: Muestra un cuadro de diálogo con un
+              mensaje, un campo para que el usuario ingrese datos y botones
+              "Aceptar" y "Cancelar". Se utiliza para obtener información del
+              usuario.
+              <pre><code>let nombre = prompt("Por favor, ingresa tu nombre");</code></pre>
+            </li>
+          </ul>
+          <h3>Operadores de incremento / decremento</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Operador</th>
+                <th>Qué hace</th>
+                <th>Sintaxis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>+=</td>
+                <td>Incrementar en x el valor de una variable</td>
+                <td>record += 10</td>
+              </tr>
+              <tr>
+                <td>-=</td>
+                <td>Decrementar en x el valor de una varible</td>
+                <td>record -= 7</td>
+              </tr>
+              <tr>
+                <td>*=</td>
+                <td>Multiplicar en x el valor de una variable</td>
+                <td>record *= 3</td>
+              </tr>
+              <tr>
+                <td>/=</td>
+                <td>Divide en x el valor de una variable</td>
+                <td>record /= 4</td>
+              </tr>
+              <tr>
+                <td>++</td>
+                <td>Incrementa en 1 el valor de una variable</td>
+                <td>record++</td>
+              </tr>
+              <tr>
+                <td>--</td>
+                <td>Decrementar en 1 el valor de una variable</td>
+                <td>record--</td>
+              </tr>
+            </tbody>
+          </table>
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="light"
+            data-default-tab="js,result"
+            data-slug-hash="YzBVdEP"
+            data-preview="true"
+            data-editable="true"
+            data-user="freezyfrosty"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/freezyfrosty/pen/YzBVdEP">
+                Untitled</a
+              >
+              by Iria. (<a href="https://codepen.io/freezyfrosty"
+                >@freezyfrosty</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+        </article>
+        <button type="button" class="collapsible"><h2>Arrays</h2></button>
+        <article class="content">
+          <h3>¿Qué son?</h3>
+          <p>
+            Es una especie de gran variable en la que podemos almacenar varios
+            datos.
+          </p>
+          <p>Su ventaja es que puede almacenar un montón de valores.</p>
+          <p><pre><code>let articulos = ["zapatillas", "pantalón", "camiseta", "calcetines"];</code></pre></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
