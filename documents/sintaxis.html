@@ -71,6 +71,7 @@
             </li>
           </ul>
         </article>
+
         <button type="button" class="collapsible">
           <h2>Operadores básicos</h2>
         </button>
@@ -107,6 +108,7 @@
             </tbody>
           </table>
         </article>
+
         <button type="button" class="collapsible">
           <h2>Operadores y prompt</h2>
         </button>
@@ -204,6 +206,7 @@
             src="https://cpwebassets.codepen.io/assets/embed/ei.js"
           ></script>
         </article>
+
         <button type="button" class="collapsible"><h2>Arrays</h2></button>
         <article class="content">
           <h3>¿Qué son?</h3>
@@ -212,7 +215,32 @@
             datos.
           </p>
           <p>Su ventaja es que puede almacenar un montón de valores.</p>
-          <p><pre><code>let articulos = ["zapatillas", "pantalón", "camiseta", "calcetines"];</code></pre></p>
+          <pre><code>let articulos = ["zapatillas", "pantalón", "camiseta", "calcetines"];</code></pre>
+          <p>Se puede guardar en el array cualquier tipo de objetos.</p>
+          <h3>Acceder a los elementos del array</h3>
+          <pre><code>let arr = ["zapatillas", "camiseta", "pantalón", "calcetines"];
+alert(arr[1]); //camiseta</code></pre>
+          <p><em>Los índices de los arrays empiezan en 0.</em></p>
+          <h3>Propiedades y métodos del array importantes</h3>
+          <ul>
+            <li><strong>length: </strong><code>arr.length //4</code></li>
+            <li>
+              <strong>push:</strong> agrega uno o más elementos al final del
+              array y devuelve la nueva longitud del array
+            </li>
+            <li>
+              <strong>unshift:</strong> agrega uno o más elementos al inicio del
+              array y devuelve la nueva longitud del array
+            </li>
+            <li>
+              <strong>pop:</strong> elimina el último elemento del array y lo
+              devuelve
+            </li>
+            <li>
+              <strong>shift:</strong> elimina el primer elemento del array y lo
+              devuelve
+            </li>
+          </ul>
         </article>
       </section>
     </main>
