@@ -207,6 +207,188 @@
           ></script>
         </article>
 
+        <button type="button" class="collapsible"><h2>Bucles</h2></button>
+        <article class="content">
+          <h3>Bucle for</h3>
+          <ul>
+            <li>
+              Utilizado para iterar sobre una secuencia de valores (como un
+              array)
+            </li>
+            <li>
+              Estructura básica:
+              <code
+                ><strong
+                  >for (inicialización; condición; actualización) { ...cuerpo
+                  del bucle... }</strong
+                ></code
+              >
+            </li>
+            <li>
+              Ejemplo:
+              <p
+                class="codepen"
+                data-height="300"
+                data-theme-id="light"
+                data-default-tab="js,result"
+                data-slug-hash="BaMZZBG"
+                data-preview="true"
+                data-editable="true"
+                data-user="freezyfrosty"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/freezyfrosty/pen/BaMZZBG">
+                    Untitled</a
+                  >
+                  by Iria. (<a href="https://codepen.io/freezyfrosty"
+                    >@freezyfrosty</a
+                  >) on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+              ></script>
+            </li>
+          </ul>
+
+          <h3>Bucle while</h3>
+          <ul>
+            <li>Se repite mientras una condición sea verdadera.</li>
+            <li>
+              Estructura básica:
+              <strong
+                ><code
+                  >while (condición) { ...cuerpo del bucle... }</code
+                ></strong
+              >
+            </li>
+            <li>
+              Ejemplo:
+              <p
+                class="codepen"
+                data-height="300"
+                data-theme-id="light"
+                data-default-tab="js,result"
+                data-slug-hash="eYxRRJJ"
+                data-preview="true"
+                data-editable="true"
+                data-user="freezyfrosty"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/freezyfrosty/pen/eYxRRJJ">
+                    Untitled</a
+                  >
+                  by Iria. (<a href="https://codepen.io/freezyfrosty"
+                    >@freezyfrosty</a
+                  >) on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+              ></script>
+            </li>
+          </ul>
+          <p>
+            Además, hay una variable del bucle while llamada
+            <strong>do...while</strong>
+          </p>
+          <ul>
+            <li>
+              Ejecuta el cuerpo del bucle <strong>al menos una vez</strong>, y
+              luego comprueba la condición.
+            </li>
+            <li>
+              Estructura:
+              <strong
+                ><code
+                  >do { ...cuerpo del bucle... } while (condición);</code
+                ></strong
+              >
+            </li>
+          </ul>
+
+          <h3>Bucle forEach</h3>
+          <ul>
+            <li>Itera sobre cada elemento de un array.</li>
+            <li>
+              No es necesario manejar manualmente el índice de la iteración.
+            </li>
+            <li>
+              No devuelve un nuevo array ni afecta la longitud del array
+              original.
+            </li>
+            <li>
+              Estructura:
+              <strong
+                ><code
+                  >array.forEach((element) => {...codigo...});</code
+                ></strong
+              >
+            </li>
+            <li>
+              Ejemplo:
+              <p
+                class="codepen"
+                data-height="300"
+                data-theme-id="light"
+                data-default-tab="js,result"
+                data-slug-hash="qBgjjaX"
+                data-preview="true"
+                data-editable="true"
+                data-user="freezyfrosty"
+                style="
+                  height: 300px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border: 2px solid;
+                  margin: 1em 0;
+                  padding: 1em;
+                "
+              >
+                <span
+                  >See the Pen
+                  <a href="https://codepen.io/freezyfrosty/pen/qBgjjaX">
+                    Untitled</a
+                  >
+                  by Iria. (<a href="https://codepen.io/freezyfrosty"
+                    >@freezyfrosty</a
+                  >) on <a href="https://codepen.io">CodePen</a>.</span
+                >
+              </p>
+              <script
+                async
+                src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+              ></script>
+            </li>
+          </ul>
+        </article>
+
         <button type="button" class="collapsible"><h2>Arrays</h2></button>
         <article class="content">
           <h3>¿Qué son?</h3>
@@ -216,7 +398,10 @@
           </p>
           <p>Su ventaja es que puede almacenar un montón de valores.</p>
           <pre><code>let articulos = ["zapatillas", "pantalón", "camiseta", "calcetines"];</code></pre>
-          <p>Se puede guardar en el array cualquier tipo de objetos.</p>
+          <p>
+            Se puede guardar en el array cualquier tipo de objetos, aunque no es
+            recomendable.
+          </p>
           <h3>Acceder a los elementos del array</h3>
           <pre><code>let arr = ["zapatillas", "camiseta", "pantalón", "calcetines"];
 alert(arr[1]); //camiseta</code></pre>
@@ -241,6 +426,28 @@ alert(arr[1]); //camiseta</code></pre>
               devuelve
             </li>
           </ul>
+          <h3>Recorrer un array</h3>
+          <code>
+            <pre>
+            const nombres = ["David", "Juan", "Kevin"]; 
+            for (let i = 0; i &lt; nombres.length; i++) { 
+              console.log(nombres[i]); 
+            } 
+            // Imprime: 
+            // David 
+            // Juan 
+            // Kevin
+
+            nombres.forEach((elemento) => {
+              console.log(elemento);
+            });
+            //Imprimirá lo mismo que el for
+          </pre
+            >
+          </code>
+          <h3>Array.map</h3>
+          <p>Nos permite transformar los elementos de un array.</p>
+          <p></p>
         </article>
       </section>
     </main>
