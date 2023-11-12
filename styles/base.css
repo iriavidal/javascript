@@ -1,23 +1,134 @@
+/* Paleta de colores lavanda pastel */
+:root {
+  --color-fondo: #f7f7fa;
+  --color-texto: #333;
+  --color-botones: #a8a8d0;
+  --color-destacado: #8d86c9;
+}
+
+/* Estilos generales */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--color-destacado);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
 /* Desplegables */
 .collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s;
-  }
-  
-  .collapsible.active {
-    background-color: #ccc;
-  }
-  
-  .content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-  }
-  
+  background-color: var(--color-botones);
+  color: var(--color-destacado);
+  cursor: pointer;
+  padding: 18px;
+  margin-bottom: 2px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.collapsible.active {
+  background-color: var(--color-destacado);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Estilos del contenido */
+article {
+  margin-top: 10px;
+}
+
+.collapsible.active h2 {
+  color: var(--color-botones);
+}
+
+h3 {
+  color: var(--color-destacado);
+  border: 1px dotted var(--color-botones);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul,
+ol {
+  list-style: initial;
+  margin-left: 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+pre {
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-destacado);
+  color: white;
+}
+
+/* Estilos para el código de CodePen */
+.codepen {
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-destacado);
+  margin: 1em 0;
+  padding: 1em;
+}
+
+/* Estilos para los enlaces de CodePen */
+.codepen a {
+  color: var(--color-destacado);
+  text-decoration: none;
+}
+
+.codepen a:hover {
+  text-decoration: underline;
+}

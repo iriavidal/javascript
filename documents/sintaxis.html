@@ -33,15 +33,14 @@
           <pre><code>isNaN();</code></pre>
           <h4>Tipos de datos</h4>
           <ul>
-            <li>Tres tipos básicos:</li>
-            <ul>
-              <li>Números</li>
-              <li>Strings</li>
+            <li>Números</li>
+            <li>
+              Strings
               <ul>
                 <li>Deben ir entrecomillados: &apos;, &quot;, `</li>
               </ul>
-              <li>Booleans: true, false</li>
-            </ul>
+            </li>
+            <li>Booleans: true, false</li>
           </ul>
           <h3>Variables</h3>
           <p>Se utilizan en todos los lenguajes de programación.</p>
@@ -445,9 +444,154 @@ alert(arr[1]); //camiseta</code></pre>
           </pre
             >
           </code>
+          <h3>Array.from</h3>
+          <p>
+            Array.from es un método incorporado en JavaScript que se utiliza
+            para crear un nuevo array a partir de un objeto iterable o de una
+            estructura similar a un array. Puede ser una forma más conveniente y
+            expresiva de convertir ciertos tipos de datos en arrays.
+          </p>
+          <p>
+            Sintaxis:
+            <strong
+              ><code
+                >Array.from(iterable[, mapeoFuncion[, contexto]])</code
+              ></strong
+            >
+          </p>
+          <ul>
+            <li>
+              <strong>iterable:</strong> el objeto iterable o similar a un array
+              que se convertirá en un nuevo array.
+            </li>
+            <li>
+              <strong>mapeoFuncion</strong> (opcional): una función de mapeo que
+              se ejecutará para cada elemento del iterable.
+            </li>
+            <li>
+              <strong>contexto</strong> (opcional): un valor para usar como this
+              al ejecutar la función de mapeo.
+            </li>
+          </ul>
+          <p>Ejemplos:</p>
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="light"
+            data-default-tab="js,result"
+            data-slug-hash="rNPwwmW"
+            data-preview="true"
+            data-editable="true"
+            data-user="freezyfrosty"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/freezyfrosty/pen/rNPwwmW">
+                Untitled</a
+              >
+              by Iria. (<a href="https://codepen.io/freezyfrosty"
+                >@freezyfrosty</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+          <p>Cómo funciona:</p>
+          <ol>
+            <li>
+              <strong>Con iterables:</strong> Si el objeto pasado a Array.from
+              es iterable (por ejemplo, un array, una cadena, un objeto Set),
+              creará un nuevo array con los elementos de ese iterable.
+            </li>
+            <li>
+              <strong>Con función de mapeo:</strong> Puedes proporcionar una
+              función de mapeo como segundo argumento. Esta función se aplicará
+              a cada elemento del iterable antes de ser agregado al nuevo array.
+            </li>
+          </ol>
           <h3>Array.map</h3>
-          <p>Nos permite transformar los elementos de un array.</p>
-          <p></p>
+          <p>
+            El método map se utiliza en arrays y crea un nuevo array con los
+            resultados de llamar a una función proporcionada por cada elemento
+            en el array original.
+          </p>
+          <p>
+            Es una forma eficiente y expresiva de transformar los elementos de
+            un array sin modificar el array original.
+          </p>
+          <p>Sintaxis:</p>
+          <pre><strong><code>
+    const nuevoArray = arrayOriginal.map(function(elemento, índice, array) {
+      // ...lógica de transformación...
+      return nuevoElemento;
+    });            
+          </code></strong></pre>
+          <ul>
+            <li>
+              <strong>elemento:</strong> el elemento actual que está siendo
+              procesado
+            </li>
+            <li><strong>índice:</strong> el índice del elemento actual.</li>
+            <li><strong>array:</strong> el array original</li>
+          </ul>
+          <p>Ejemplo:</p>
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="light"
+            data-default-tab="js,result"
+            data-slug-hash="VwgWrLr"
+            data-preview="true"
+            data-editable="true"
+            data-user="freezyfrosty"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/freezyfrosty/pen/VwgWrLr">
+                Untitled</a
+              >
+              by Iria. (<a href="https://codepen.io/freezyfrosty"
+                >@freezyfrosty</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
+          <h4>Diferencia clave entre array.from y array.map</h4>
+          <ul>
+            <li>
+              Array.from se utiliza para convertir estructuras de datos
+              iterables o similares a arrays en arrays reales.
+            </li>
+            <li>
+              Array.map se utiliza para transformar elementos e un array
+              existente y crea un nuevo array basado en la transformación.
+            </li>
+          </ul>
         </article>
       </section>
     </main>
