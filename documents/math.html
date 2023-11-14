@@ -5,21 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../scripts/base.js" defer></script>
     <link rel="stylesheet" href="../styles/base.css" />
-    <title>Math</title>
+    <title>Números</title>
   </head>
   <body>
     <header>
-      <h1>Math</h1>
+      <h1>Números</h1>
     </header>
     <main>
       <section>
         <button type="button" class="collapsible">
-          <h2>isNaN</h2>
+          <h2>isNaN()</h2>
         </button>
         <article class="content">
           <p>Determina cuándo un valor es un número o no.</p>
+          <p>
+            <em
+              >NaN significa <strong>N</strong>ot <strong>a</strong>
+              <strong>N</strong>umber</em
+            >
+          </p>
+          <p>Resultados:</p>
+          <ul>
+            <li>
+              <strong>true</strong>: significa que el valor dado
+              <strong>no es un número</strong>
+            </li>
+            <li>
+              <strong>false</strong>: significa que el valor dado
+              <strong>sí es un número</strong>
+            </li>
+          </ul>
+          <p
+            class="codepen"
+            data-height="300"
+            data-theme-id="light"
+            data-default-tab="js,result"
+            data-slug-hash="jOdGrWX"
+            data-preview="true"
+            data-editable="true"
+            data-user="freezyfrosty"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/freezyfrosty/pen/jOdGrWX">
+                Untitled</a
+              >
+              by Iria. (<a href="https://codepen.io/freezyfrosty"
+                >@freezyfrosty</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+          </p>
+          <script
+            async
+            src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+          ></script>
         </article>
+
+        <button type="button" class="collapsible">
+          <h2>parseInt() y parseFloat()</h2>
+        </button>
+        <article class="content">
+          <h3>parseInt</h3>
+          <ul>
+            <li>
+              parseInt se utiliza para convertir una cadena de texto en un
+              número entero.
+            </li>
+            <li>
+              Puede tomar dos argumentos: la cadena que se va a convertir y una
+              base numérica opcional que indica en qué sistema numérico se
+              encuentra la cadena (por ejemplo, base 10 para decimal, base 16
+              para hexadecimal, etc.).
+            </li>
+            <li>
+              Si la base no se especifica, se asume que es 10 en la mayoría de
+              los casos.
+            </li>
+            <li>
+              Se extraen los caracteres numéricos de la cadena hasta que se
+              encuentra un carácter no numérico o se llega al final de la
+              cadena.
+            </li>
+            <li>
+              <code
+                ><script>
+                  document.write(
+                    `let numero = parseInt("hola") // Resultado: ${parseInt(
+                      "hola"
+                    )}`
+                  );
+                </script></code
+              >
+            </li>
+            <li>
+              <code
+                ><script>
+                  document.write(
+                    `let numero = parseInt("1523.254") // Resultado: ${parseInt(
+                      "1523.254"
+                    )}`
+                  );
+                </script></code
+              >
+            </li>
+          </ul>
+          <h3>parseFloat</h3>
+          <ul>
+            <li>
+              parseFloat se utiliza para convertir una cadena de texto en un
+              número de punto flotante (número con decimales).
+            </li>
+            <li>
+              Similar a parseInt, pero acepta números decimales y utiliza la
+              notación de punto flotante.
+            </li>
+            <li>
+              Igualmente, puede haber caracteres no numéricos al final de la
+              cadena, y la conversión se detendrá en ese punto.
+            </li>
+            <li>
+              <code
+                ><script>
+                  document.write(
+                    `let numero = parseFloat("hola") // Resultado: ${parseFloat(
+                      "hola"
+                    )}`
+                  );
+                </script></code
+              >
+            </li>
+            <li>
+              <code
+                ><script>
+                  document.write(
+                    `let numero = parseFloat("1523.254") // Resultado: ${parseFloat(
+                      "1523.254"
+                    )}`
+                  );
+                </script></code
+              >
+            </li>
+          </ul>
+        </article>
+
+        <button type="button" class="collapsible">
+          <h2>.toFixed()</h2>
+        </button>
+        <article class="content">
+          <ul>
+            <li>
+              toFixed es un método que se utiliza con números en JavaScript para
+              fijar la cantidad de dígitos decimales después del punto.
+            </li>
+            <li>
+              Se aplica a un número y devuelve una cadena que representa ese
+              número con la cantidad específica de decimales.
+            </li>
+            <li>
+              Toma un argumento que especifica el número de dígitos decimales a
+              mostrar. Este argumento debe estar en el rango de 0 a 20.
+            </li>
+            <li>Redondea el número según las reglas estándar de redondeo.</li>
+            <li>
+              <code
+                >let numero = 3.14159; numeroRedondeado = numero.toFixed(2); //
+                Resultado:
+                <script>
+                  let numero = 3.14159;
+                  numeroRedondeado = numero.toFixed(2);
+                  document.write(numeroRedondeado);
+                </script>
+              </code>
+            </li>
+          </ul>
+        </article>
+
+        <button type="button" class="collapsible">
+          <h2>Math.hypot</h2>
+        </button>
+        <article class="content">
+          <ul>
+            <li>
+              Se utiliza para calcular la longitud del vector, es decir, la
+              hipotenusa de un conjunto de valores.
+            </li>
+            <li>
+              Acepta varios argumentos numéricos y devuelve la raíz cuadrada de
+              la suma de los cuadrados de esos argumentos.
+            </li>
+            <li>
+              <code
+                >let longitud = Math.hypot(3, 4); // Devuelve la hipotenusa de
+                un triángulo rectángulo con lados de longitud 3 y 4. En este
+                caso, el resultado sería 5.
+              </code>
+            </li>
+          </ul>
+        </article>
+
+        <button type="button" class="collapsible">
+          <h2></h2>
+        </button>
+        <article class="content"></article>
       </section>
     </main>
   </body>
 </html>
+
+<button type="button" class="collapsible">
+  <h2></h2>
+</button>
+<article class="content"></article>
