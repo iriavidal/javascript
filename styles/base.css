@@ -57,7 +57,7 @@ main {
 
 /* Estilos del contenido */
 article {
-  margin-top: 10px;
+  padding: 5px 10px;
 }
 
 .collapsible.active h2 {
