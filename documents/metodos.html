@@ -67,6 +67,31 @@ console.log(saludoRepetido);
             src="https://cpwebassets.codepen.io/assets/embed/ei.js"
           ></script>
         </article>
+        <button type="button" class="collapsible">
+          <h2>.slice()</h2>
+        </button>
+        <article class="content">
+          <p>
+            Se utiliza para extraer una porción (subcadena) de una cadena o
+            array, sin modificar la cadena o array original.
+          </p>
+          <h4>Para cadenas:</h4>
+          <pre><code>const mensaje = "Hola, mundo";
+
+// Utilizando slice para obtener una porción de la cadena
+const porcion = mensaje.slice(0, 4);
+
+console.log(porcion);
+// Salida: "Hola"</code></pre>
+          <h4>Para arrays:</h4>
+          <pre><code>const numeros = [1, 2, 3, 4, 5];
+
+// Utilizando slice para obtener una porción del array
+const porcionArray = numeros.slice(1, 4);
+    
+console.log(porcionArray);
+// Salida: [2, 3, 4]</code></pre>
+        </article>
       </section>
     </main>
   </body>

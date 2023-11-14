@@ -264,6 +264,27 @@
               ></script>
             </li>
           </ul>
+          <pre><code>// La función parFor genera una cadena que contiene números pares hasta un valor dado.
+
+const parFor = (n) => {
+  // Inicializa una cadena vacía para almacenar los números pares.
+  let msg = "";
+            
+  // Inicia un bucle que comienza desde 2 (primer número par) hasta el número dado 'n', aumentando en 2 en cada iteración para incluir solo números pares.
+  for (let i = 2; i &lt;= n; i += 2) {
+    // Concatena cada número par seguido de una coma y un espacio a la cadena 'msg'.
+    msg += `${i}, `;
+  }
+            
+  // Utiliza el método slice para eliminar la coma y el espacio finales no deseados y devuelve la cadena resultante.
+    return msg.slice(0, -2);
+  };
+            
+            // Ejemplo de uso de la función con 'n' igual a 10.
+            const resultado = parFor(10);
+            console.log(resultado);
+            // Salida esperada: "2, 4, 6, 8, 10"
+            </code></pre>
 
           <h3>Bucle while</h3>
           <ul>
@@ -511,6 +532,52 @@ alert(arr[1]); //camiseta</code></pre>
             async
             src="https://cpwebassets.codepen.io/assets/embed/ei.js"
           ></script>
+          <pre><code>// La función solucionArray1 genera una cadena que contiene números pares hasta un valor dado 'n'.
+
+function solucionArray1(n) {
+  // Crea un array 'numeros' utilizando Array.from y un objeto con 'length' igual a 'n'.
+  // El segundo argumento de Array.from crea elementos del array con valores desde 1 hasta 'n'.
+  let numeros = Array.from({ length: n }, (el, i) => i + 1);
+            
+  // Filtra los elementos del array 'numeros' para obtener solo los números pares.
+  // Utiliza el método 'filter' con una función de devolución de llamada que verifica si un número es par.
+  let numerosPares = numeros.filter((el) => el % 2 == 0);
+            
+  // Convierte el array de números pares en una cadena, uniendo los elementos con una coma y un espacio.
+  let resultado = numerosPares.join(", ");
+            
+    // Devuelve la cadena resultante que contiene los números pares separados por comas.
+    return resultado;
+  }
+            
+  // Ejemplo de uso de la función con 'n' igual a 10.
+  const resultado = solucionArray1(10);
+  console.log(resultado);
+  // Salida esperada: "2, 4, 6, 8, 10"</code></pre>
+
+          <pre><code>// La función solucionArray2 genera una cadena que contiene números pares hasta un valor dado 'n'.
+
+function solucionArray2(n) {
+  // Calcula la cantidad de elementos necesarios para generar los números pares.
+  // Si 'n' es par, divide 'n' por 2; si 'n' es impar, resta 1 a 'n' y luego divide por 2.
+  nElementos = n % 2 == 0 ? n / 2 : (n - 1) / 2;
+    
+  // Crea un array 'pares' utilizando Array.from y un objeto con 'length' igual a 'nElementos'.
+  // El segundo argumento de Array.from crea elementos del array con valores desde 2 hasta 'n' en pasos de 2.
+  let pares = Array.from({ length: nElementos }, (el, i) => 2 * (i + 1));
+    
+  // Convierte el array de números pares en una cadena, uniendo los elementos con una coma y un espacio.
+  let resultado = pares.join(", ");
+    
+  // Devuelve la cadena resultante que contiene los números pares separados por comas.
+  return resultado;
+}
+    
+// Ejemplo de uso de la función con 'n' igual a 10.
+const resultado = solucionArray2(10);
+console.log(resultado);
+// Salida esperada: "2, 4, 6, 8, 10"</code></pre>
+
           <p>Cómo funciona:</p>
           <ol>
             <li>
@@ -584,6 +651,32 @@ alert(arr[1]); //camiseta</code></pre>
             async
             src="https://cpwebassets.codepen.io/assets/embed/ei.js"
           ></script>
+          <pre><code>// Definición de una función llamada 'cuadrados' que toma dos números y devuelve una cadena
+const cuadrados = function (num1, num2) {
+  // Convierte los valores introducidos a números enteros
+  num1 = parseInt(num1);
+  num2 = parseInt(num2);
+            
+  // Crea un array que contiene números en el rango [num1, num2], ambos inclusive
+  const arr = Array.from({ length: num2 - num1 + 1 }, (el, i) => num1 + i);
+            
+  // Mapea cada elemento del array para calcular su cuadrado utilizando Math.pow
+  const arr2 = arr.map((el) => Math.pow(el, 2));
+            
+  // Convierte el array de cuadrados en una cadena, separando los elementos por comas
+  return arr2.join(", ");
+};
+            
+// Solicita dos números al usuario hasta que ambos sean válidos (no NaN)
+let num1, num2;
+do {
+  num1 = prompt("Número 1");
+  num2 = prompt("Número 2");
+} while (isNaN(num1) || isNaN(num2));
+            
+// Llama a la función cuadrados con los números proporcionados por el usuario y muestra el resultado
+console.log(cuadrados(num1, num2));</code></pre>
+
           <h4>Diferencia clave entre array.from y array.map</h4>
           <ul>
             <li>
