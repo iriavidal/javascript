@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <script src="../scripts/base.js" defer></script>
     <title>Introducción</title>
   </head>
   <body>
     <header>
+      <h1>Introducción</h1>
       <nav>
         <a href="./index.html">Apuntes Javascript</a>
       </nav>
-      <h1>Introducción</h1>
     </header>
     <main>
       <section>
-        <article>
+        <button type="button" class="collapsible">
           <h2>Características de JavaScript</h2>
+        </button>
+        <article class="content">
           <ul>
             <li>Tiene un objetivo concreto: ejecutarse en un navegador</li>
             <li>Se ejecuta en local, lo cual implica rapidez e inmediatez</li>
@@ -25,8 +29,11 @@
             <li>Proporciona efectos visuales dinámicos</li>
           </ul>
         </article>
-        <article>
+
+        <button type="button" class="collapsible">
           <h2>JQUERY. ¿Qué es?</h2>
+        </button>
+        <article class="content">
           <ul>
             <li>
               Una librería de código JS ya elaborado, libre, de código abierto
@@ -48,8 +55,11 @@
             </li>
           </ul>
         </article>
-        <article>
+
+        <button type="button" class="collapsible">
           <h2>Agregando Javascript a una página</h2>
+        </button>
+        <article class="content">
           <ul>
             <li>¿Dónde va el código?</li>
             <ul>
