@@ -10,6 +10,9 @@
   <body>
     <header>
       <h1>Números</h1>
+      <nav>
+        <a href="../index.html">Apuntes Javascript</a>
+      </nav>
     </header>
     <main>
       <section>
@@ -96,28 +99,8 @@
               encuentra un carácter no numérico o se llega al final de la
               cadena.
             </li>
-            <li>
-              <code
-                ><script>
-                  document.write(
-                    `let numero = parseInt("hola") // Resultado: ${parseInt(
-                      "hola"
-                    )}`
-                  );
-                </script></code
-              >
-            </li>
-            <li>
-              <code
-                ><script>
-                  document.write(
-                    `let numero = parseInt("1523.254") // Resultado: ${parseInt(
-                      "1523.254"
-                    )}`
-                  );
-                </script></code
-              >
-            </li>
+            <pre><code><script>document.write(`let numero = parseInt("hola") // Resultado: ${parseInt("hola")}`);</script></code></pre>
+            <pre><code><script>document.write(`let numero = parseInt("1523.254") // Resultado: ${parseInt("1523.254")}`);</script></code></pre>
           </ul>
           <h3>parseFloat</h3>
           <ul>
@@ -133,28 +116,9 @@
               Igualmente, puede haber caracteres no numéricos al final de la
               cadena, y la conversión se detendrá en ese punto.
             </li>
-            <li>
-              <code
-                ><script>
-                  document.write(
-                    `let numero = parseFloat("hola") // Resultado: ${parseFloat(
-                      "hola"
-                    )}`
-                  );
-                </script></code
-              >
-            </li>
-            <li>
-              <code
-                ><script>
-                  document.write(
-                    `let numero = parseFloat("1523.254") // Resultado: ${parseFloat(
-                      "1523.254"
-                    )}`
-                  );
-                </script></code
-              >
-            </li>
+
+            <pre><code><script>document.write(`let numero = parseFloat("hola") // Resultado: ${parseFloat("hola")}`);</script></code></pre>
+            <pre><code><script>document.write(`let numero = parseFloat("1523.254") // Resultado: ${parseFloat("1523.254")}`);</script></code></pre>
           </ul>
         </article>
 
@@ -176,17 +140,8 @@
               mostrar. Este argumento debe estar en el rango de 0 a 20.
             </li>
             <li>Redondea el número según las reglas estándar de redondeo.</li>
-            <li>
-              <code
-                >let numero = 3.14159; numeroRedondeado = numero.toFixed(2); //
-                Resultado:
-                <script>
-                  let numero = 3.14159;
-                  numeroRedondeado = numero.toFixed(2);
-                  document.write(numeroRedondeado);
-                </script>
-              </code>
-            </li>
+
+            <pre><code>let numero = 3.14159; numeroRedondeado = numero.toFixed(2); // Resultado:<script>let numero = 3.14159; numeroRedondeado = numero.toFixed(2); document.write(numeroRedondeado);</script></code></pre>
           </ul>
         </article>
 
@@ -203,13 +158,8 @@
               Acepta varios argumentos numéricos y devuelve la raíz cuadrada de
               la suma de los cuadrados de esos argumentos.
             </li>
-            <li>
-              <code
-                >let longitud = Math.hypot(3, 4); // Devuelve la hipotenusa de
-                un triángulo rectángulo con lados de longitud 3 y 4. En este
-                caso, el resultado sería 5.
-              </code>
-            </li>
+
+            <pre><code>let longitud = Math.hypot(3, 4); // Devuelve la hipotenusa de un triángulo rectángulo con lados de longitud 3 y 4. En este caso, el resultado sería 5.</code></pre>
           </ul>
         </article>
 
