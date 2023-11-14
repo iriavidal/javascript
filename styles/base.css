@@ -57,7 +57,7 @@ main {
 
 /* Estilos del contenido */
 article {
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 .collapsible.active h2 {
@@ -69,6 +69,7 @@ h3 {
   border: 1px dotted var(--color-botones);
   border-radius: 5px;
   padding: 10px;
+  margin-top: 50px;
 }
 
 ul,

@@ -595,6 +595,53 @@ alert(arr[1]); //camiseta</code></pre>
               existente y crea un nuevo array basado en la transformación.
             </li>
           </ul>
+          <h3>Operador de Propagación (Spread Operator)</h3>
+          <p>
+            Permite expandir expresiones en lugares donde se esperan múltiples
+            argumentos (por ejemplo, funciones) o múltiples elementos (por
+            ejemplo, arrays).
+          </p>
+          <p>
+            La sintaxis del operador de propagación es <strong>...</strong>,
+            seguido de una expresión o iterable (como un array, una cadena,
+            etc.).
+          </p>
+
+          <h4>En el contexto de funciones:</h4>
+          <pre><code>// Ejemplo con funciones
+function sumar(a, b, c) {
+  return a + b + c;
+}
+            
+const numeros = [1, 2, 3];
+            
+// Utilizando el operador de propagación para pasar elementos de un array como argumentos individuales
+const resultado = sumar(...numeros);
+console.log(resultado); // Salida: 6</code></pre>
+
+          <h4>En la creación de arrays:</h4>
+          <pre><code>// Ejemplo con arrays
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+            
+// Utilizando el operador de propagación para combinar dos arrays
+const arrayConcatenado = [...array1, ...array2];
+console.log(arrayConcatenado); // Salida: [1, 2, 3, 4, 5, 6]</code></pre>
+
+          <h3>.join()</h3>
+          <p>
+            Se utiliza para concatenar los elementos de un array en una sola
+            cadena. La idea principal es crear una cadena donde los elementos
+            del array estén separados por un delimitador específico que
+            determines.
+          </p>
+          <pre><code>const frutas = ["manzana", "banana", "cereza"];
+
+// Utilizando join para unir elementos con un guion como delimitador
+const cadenaFrutas = frutas.join("-");
+            
+console.log(cadenaFrutas);
+// Salida: "manzana-banana-cereza"</code></pre>
         </article>
       </section>
     </main>
