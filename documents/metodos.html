@@ -67,6 +67,7 @@ console.log(saludoRepetido);
             src="https://cpwebassets.codepen.io/assets/embed/ei.js"
           ></script>
         </article>
+
         <button type="button" class="collapsible">
           <h2>.slice()</h2>
         </button>
@@ -91,6 +92,49 @@ const porcionArray = numeros.slice(1, 4);
     
 console.log(porcionArray);
 // Salida: [2, 3, 4]</code></pre>
+          <pre><code>// Función que verifica si un número es automorfo
+function automorfo(n) {
+  // Calcula el cuadrado de n y lo convierte a cadena
+  let n2 = Math.pow(n, 2).toString();
+            
+  // Obtiene los últimos dígitos del cuadrado, donde dígitos es la cantidad de dígitos en n
+  let final = Array.from(n2).slice(-n.length);
+            
+  // Compara el número original con los últimos dígitos del cuadrado
+  return n == final.join("");
+}
+            
+// Variable para almacenar el número ingresado por el usuario
+let n;
+            
+// Ciclo do-while para solicitar un número válido al usuario
+do {
+  n = prompt("Número");
+} while (isNaN(n) || n &lt; 1);
+            
+// Llama a la función automorfo y muestra el resultado en la consola
+console.log(automorfo(n));</code></pre>
+        </article>
+
+        <button type="button" class="collapsible">
+          <h2>.endsWith()</h2>
+        </button>
+        <article class="content">
+          <p>
+            Se utiliza con cadenas de texto. La función de endsWith es verificar
+            si una cadena termina con otra cadena específica. Devuelve true si
+            la cadena original termina con la cadena proporcionada y false en
+            caso contrario.
+          </p>
+          <pre><code>let frase = "Hola, mundo";
+
+// Verifica si la frase termina con "mundo"
+let terminaConMundo = frase.endsWith("mundo");
+            
+console.log(terminaConMundo); // Devolverá true</code></pre>
+          <pre><code>function automorfo2(n) {
+  return Math.pow(n, 2).toString().endsWith(n);
+}</code></pre>
         </article>
       </section>
     </main>
